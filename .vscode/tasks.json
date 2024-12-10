@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+	   {
+		  "label": "build with MSVC",
+		  "type": "shell",
+		  "command": "cl.exe",
+		  "args": [
+			 "/EHsc",  // 使能异常处理（选项）
+			 "/Fe:tiny_basic.exe", // 输出可执行文件名
+			 "main.c",
+			 "interpreter.c",
+			 "parser.c",
+			 "utils.c"
+		  ],
+		  "group": {
+			 "kind": "build",
+			 "isDefault": true
+		  },
+		  "problemMatcher": ["$msCompile"],
+		  "detail": "Generated task for building with MSVC"
+	   }
+	]
+ }
+ 
